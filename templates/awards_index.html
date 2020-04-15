@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Young Innovators' Program, IIT Kharagpur </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/awards_bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/awards_stylerule.css')}}">
+  <link rel="short icon" type="image/jpg" href="{{url_for('static', filename='img/logo.jpg')}}" >
+		     <style type="text/css">
+                              a img{
+  max-height: 10vh !important;
+}
+#yipimg{
+  max-height: 8vh !important;
+  padding-left: 10px;
+}
+#bar2{
+            height: auto;
+            width: auto;
+    }
+#bar1{
+            height: 13vh;
+            opacity: 0.8;
+    }
+    /* ====  Preloader styles ==== */
+#hola{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252328;
+    position: fixed;
+    z-index: 999;
+}
+#preloader {
+  position:relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    margin: 0 auto;
+}
+#preloader span {
+  position:absolute;
+  border: 8px solid #fff;
+  border-top: 8px solid transparent;
+  border-radius:999px;
+}
+
+#preloader span:nth-child(1){
+  width:80px;
+  height:80px;
+  animation: spin_1 2s infinite linear;
+}
+#preloader span:nth-child(2){
+  top: 20px;
+  left: 20px;
+  width:40px;
+  height:40px;
+  animation: spin_2 1s infinite linear;
+}
+@keyframes spin_1 {
+  0% {transform: rotate(360deg); opacity: 1;}
+  50% {transform: rotate(180deg); opacity: 0.5;}
+  100% {transform: rotate(0deg); opacity: 1;}
+}
+@keyframes spin_2 {
+  0% {transform: rotate(0deg); opacity: 0.5;}
+  50% {transform: rotate(180deg); opacity: 1;}
+  100% {transform: rotate(360deg); opacity: 0.5;}
+}
+      </style>
+
+</head>
+
+ <!-- Page preloader -->
+        <div id="hola">
+        <div id="preloader">
+        <span></span>
+        <span></span>
+          </div>
+            </div>
+
+
+
+<div id="containercard" >
+<div class="container card">
+	<div class="col-sm-12 center">
+		<h3>Awards</h3>
+	</div>
+	<div class="col-sm-12">
+		<h4>Reward Structure: </h4><br>
+		<ul>
+			<li>Champion <i style="color: #aaa">- Prize money will be announced soon.</i></li>
+			<li>1st Runner Up <i style="color: #aaa">- Prize money will be announced soon.</i></li>
+			<li>2nd Runner Up <i style="color: #aaa">- Prize money will be announced soon.</i></li>
+			<p>
+				A <b>certificate of participation</b> will be given to the teams participating in Round 3 and a<b> certificate of appreciation</b> for the teams qualifying Round 3. Small rewards will be there for the competitions which will be conducted during their stay at IIT Kharagpur.</li>
+			</p>
+		</ul>
+	</div>
+</div>
+
+
+  <script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
+	<script type="text/javascript">
+		   $(document).ready(function(){
+   				$('#hola').fadeOut(1000);
+   			});
+	</script>
+
+</body>
+</html>

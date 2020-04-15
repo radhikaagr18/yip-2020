@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Young Innovators' Program, IIT Kharagpur </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/rules_bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/rules_stylerule.css') }}">
+	<link rel="short icon" type="image/jpg" href="{{url_for('static', filename='img/logo.jpg')}}" >
+
+	     <style type="text/css">
+	     	      	    a img{
+  max-height: 10vh !important;
+}
+#yipimg{
+  max-height: 8vh !important;
+  padding-left: 10px;
+}
+#bar2{
+            height: auto;
+            width: auto;
+    }
+#bar1{
+            height: 13vh;
+            opacity: 0.8;
+    }
+    /* ====  Preloader styles ==== */
+#hola{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252328;
+    position: fixed;
+    z-index: 999;
+}
+#preloader {
+  position:relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    margin: 0 auto;
+}
+#preloader span {
+  position:absolute;
+  border: 8px solid #fff;
+  border-top: 8px solid transparent;
+  border-radius:999px;
+}
+
+#preloader span:nth-child(1){
+  width:80px;
+  height:80px;
+  animation: spin_1 2s infinite linear;
+}
+#preloader span:nth-child(2){
+  top: 20px;
+  left: 20px;
+  width:40px;
+  height:40px;
+  animation: spin_2 1s infinite linear;
+}
+@keyframes spin_1 {
+  0% {transform: rotate(360deg); opacity: 1;}
+  50% {transform: rotate(180deg); opacity: 0.5;}
+  100% {transform: rotate(0deg); opacity: 1;}
+}
+@keyframes spin_2 {
+  0% {transform: rotate(0deg); opacity: 0.5;}
+  50% {transform: rotate(180deg); opacity: 1;}
+  100% {transform: rotate(360deg); opacity: 0.5;}
+}
+      </style>
+</head>
+<body>
+	    <!-- Page preloader -->
+        <div id="hola">
+        <div id="preloader">
+        <span></span>
+        <span></span>
+          </div>
+            </div>
+    <!-- logo -->
+
+
+
+<div  class="container card" id="containercard">
+	<div class="col-sm-12 center">
+		<h3>Rules and Regulations</h3>
+	</div>
+	<div class="col-sm-12">
+		<h4>Application Procedure: </h4><br>
+				<h5>Round 1 (Enrollment and Submission)</h5>
+				<ol>
+					<li>
+						<p>The principal needs to nominate a coordinating teacher for this program, who will be given a user ID and password for registration of the students.</p>
+					</li>
+					<li>
+						<p>The students will give their details of the team along with the fees to the coordinating teacher. The coordinating teacher will upload the details on the registration portal along with payment of the enrollment fee collected all at once.</p>
+					</li>
+					<li>
+						<p>The students need to submit the synopsis and the statement of purpose based on any one of the six themes: <strong>Clean Energy, Health and Cleanliness, Resource Management, Hardware Modelling, Product Designing and Disaster Management</strong>. The submission will be accepted <strong>only in a one page .pdf format file</strong>. The text style should be <strong>Arial</strong> and the text size should be <strong>11</strong>.</p>
+					</li>
+					<li>
+						<p>The online submissions of the projects will be done by the coordinating teacher by using his/her user id and password on the portal.</p>
+					</li>
+					<p>
+						<strong>Enrollment starts: To be Declared</strong><br/>
+						<strong>Last date of enrollment: To be Declared</strong><br/>
+						<strong>Submission starts: To be Declared</strong><br/>
+						<strong>Last date of submission: To be Declared</strong><br/>
+						<strong>Enrollment fees:	To be Declared.</strong>
+					</p>
+				</ol>
+				<h5>Round 2 (Semifinal)</h5>
+				<ol>
+					<li>
+						<p>The team will submit their abstract of the project ideas briefing the scientific proposal based on the chosen theme. The online submissions of the projects will be done by the coordinating teacher by using his/her user id and password on the portal.</p>
+					</li>
+					<li>
+						<p>
+							The detailed rules of the submission of this round will be announced after the declaration of results of the first round. Please visit our website for the results and the rules.
+						</p>
+					</li>
+					<li>
+						<p>
+							Round 1 results will be released both on our website. All participants who make it to the next round will also receive the news via email. The selected students will proceed to round 2.
+						</p>
+					</li>
+					<p>
+						<strong>Submission starts: To be Declared</strong><br/>
+						<strong>Last date of submission: To be Declared</strong><br/>
+						<strong>Fees:	No fees.</strong>
+					</p>
+				</ol>
+				<h5>Round 3 & 4 (Final and Winners Round - Registration details)</h5>
+				<ol>
+					<li>
+						<p>The teams selected for the final round will be called to IIT Kharagpur. Teams from each school will be accompanied by the coordinating teacher without which their participation for further rounds stands cancelled.</p>
+					</li>
+					<li>
+						<p>To confirm participation for the final round in IIT Kharagpur, the teams need to pay the registration fees for final round via coordinating teacher before the deadline.</p>
+					</li>
+					<li>
+						<p>The registration fees includes the cost of accomodation and fooding of the students and the accompanying teacher. <strong>The travel should be arranged by the students and teacher themselves.</strong></p>
+					</li>
+					<p>
+						Deadline for confirmation:<strong> To be Declared</strong><br/>
+						Enrollment Fess:<strong> Will be declared after results of first round </strong><br/>
+						Date of arrival:<strong> To be Declared.</strong>
+					</p>
+				</ol>
+				<h5>Round 3 & 4 (Final and Winners Round - Competition Structure)</h5>
+				<ol>
+					<!-- <li>
+						<p>These rounds will be conducted in IIT Kharagpur on 28th and 29th October 2018.</p>
+					</li> -->
+					<li>
+						<p>
+							The third round will be an exhibition of the working model or the prototype or charts along with a detailed demonstration of the entire project that the team has worked upon to the esteemed judges. The detailed rules of this round will be uploaded shortly on the website.
+						</p>
+					</li>
+					<li>
+						<p>
+							The qualifying teams from the third round will get the chance to participate in the Winners Round. In this round, each team will be given the opportunity to demonstrate their ideas in the form of a presentation and it will be followed by a question and answer session.
+						</p>
+					</li>
+					<li>
+<!-- 						<p>
+							The final declaration of the results and the prize distribution ceremony will be held on 29th October 2018 at IIT Kharagpur.
+						</p> -->
+					</li>
+					<li>
+						<p>
+							For more details, please go through <a href="/yip/attachments/Rules-Round-III-and-Round-IV.pdf">this</a> file.
+						</p>
+					</li>
+				</ol><br>
+		<h4>Payment of Fees</h4>
+		<ol>
+			<li>
+				<p>The coordinating teacher needs to sign up in the portal and fill up the necessary details of the team. Each team will have a registration id assigned to it.</p>
+			</li>
+			<li>
+				<p>Payment should be done for all team at once by Demand Draft only and not through Pay order. It should be written as Payable at IIT Kharagpur – In favour of Annual Alumni Meet.</p>
+			</li>
+			<li>
+				<p>The draft number should be uploaded on the link provided in the portal, failing to which payment of the fees won’t be considered.</p>
+			</li>
+			<p>
+				<strong>Bank Details</strong><br/>
+				Account No: 95562200012031 IFSC Code: SYNB000955<br/>
+				Home branch: Syndicate Bank, IIT Kharagpur<br/>
+			</p>
+			<p>
+				<strong>Address</strong><br>
+				Office of Alumni Affairs & International Relations,<br>
+				C/O Mr. Anand Sharma, <br>
+				IIT Kharagpur,<br>
+				Kharagpur, West Bengal - 721302 <br>
+				Phone no: +91 3222 282236
+			</p>
+			<p>
+				<strong>Online Payment Link:</strong><a href="https://www.eduqfix.com/OnlineAdmissionPortal/#/iitkR/home">Click here</a>
+
+
+			</p>
+			<p>
+				<strong>THROUGH NET BANKING</strong><br>
+				Account Name: IIT KGP AAIR EVENTS FUND<br>
+				Account no: 5010021740991<br>
+				Account type-> Savings<br>
+
+				IFSC no-> HDFC0001065<br>
+				MICR code-> 721240102<br> 
+				SWIFT code-> HDFCINBBCAL<br>
+				Branch Code : 1065<br>
+
+				Bank Address: HDFC BANK LTD., P.O, P.S. KHARAGPUR, Dist. PASCHIM MEDNIPORE, City: KHARAGPUR 721304, State: WEST BENGAL
+				<strong>The applicants will be required to send their transaction id to barc email</strong>   
+			</p>
+		</ol>
+		<p> To download detailed application procedure, click <a href="/yip/attachments/YIP_2018-One_Pager.pdf"> here </a><br>
+<!-- 		<a href="https://docs.google.com/document/d/1P8olXFrlBPp3UOyB8q3k9NaL45gq6tsC54Rw1ytjABY/edit">Deadlines and Rules</a> -->
+	</div>
+</div>
+  <script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
+	<script type="text/javascript">
+		   $(document).ready(function(){
+   				$('#hola').fadeOut(1000);
+   			});
+	</script>
+
+</body>
+</html>

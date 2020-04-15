@@ -1,0 +1,668 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/aos.css') }}">
+  <link rel="short icon" type="image/jpg" href="{{url_for('static', filename='img/logo.jpg')}}" >
+
+</head>
+<title>Young Innovators' Program, IIT Kharagpur </title>
+<style type="text/css">
+.navi{
+  display: none;
+}
+a img{
+  max-height: 10vh !important;
+}
+#yipimg{
+	max-height: 10vh !important;
+	padding-left: 10px;
+}
+/* just for jsfiddle */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings : 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.middle-indicator{
+   position:absolute;
+   top:50%;
+   }
+  .middle-indicator-text{
+   font-size: 4.2rem;
+  }
+  a.middle-indicator-text{
+    color:white !important;
+  }
+.content-indicator{
+    width: 64px;
+    height: 64px;
+    background: none;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px; 
+  }
+    .indicators{
+    visibility: hidden;
+  }
+
+
+#bar2{
+            height: auto;
+            width: auto;
+    }
+#bar1{
+            height: 5vh;
+    }
+ .card-panel{
+ 	height: 250px !important;
+ }
+ @import url(https://fonts.googleapis.com/css?family=Oswald|Josefin+Sans:300);
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ====  Preloader styles ==== */
+#hola{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252328;
+    position: fixed;
+    z-index: 999;
+}
+#preloader {
+	position:relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    margin: 0 auto;
+}
+#preloader span {
+	position:absolute;
+	border: 8px solid #fff;
+	border-top: 8px solid transparent;
+	border-radius:999px;
+}
+
+#preloader span:nth-child(1){
+	width:80px;
+	height:80px;
+	animation: spin_1 2s infinite linear;
+}
+#preloader span:nth-child(2){
+	top: 20px;
+	left: 20px;
+	width:40px;
+	height:40px;
+	animation: spin_2 1s infinite linear;
+}
+@keyframes spin_1 {
+	0% {transform: rotate(360deg); opacity: 1;}
+	50% {transform: rotate(180deg); opacity: 0.5;}
+	100% {transform: rotate(0deg); opacity: 1;}
+}
+@keyframes spin_2 {
+	0% {transform: rotate(0deg); opacity: 0.5;}
+	50% {transform: rotate(180deg); opacity: 1;}
+	100% {transform: rotate(360deg); opacity: 0.5;}
+}
+/*.prev {
+  border-left: 2px solid black;
+  left: 10%;
+  transform: rotate(-45deg);
+}
+.next {
+  border-right: 2px solid black;
+  right: 10%;
+  transform: rotate(45deg);
+}*/
+</style>
+
+<body id="home" class="scrollspy">
+	  <!-- Page preloader -->
+        <div id="hola">
+        <div id="preloader">
+        <span></span>
+        <span></span>
+          </div>
+            </div>
+
+  <!-- Nav bar 1-->
+<section id="nav1">
+  <div class="navbar-fixed"style="position: absolute;">
+    <nav class="transparent z-depth-0" id="bar1">
+        <div class="nav-wrapper">
+          <a href="http://www.iitkgp.ac.in/" class="brand-logo left" style="margin-top: 10px;"><img src="{{url_for('static', filename='img/kgp.png')}}"></a>
+          <a href="http://www.barc.iitkgp.ac.in/" class="brand-logo right" style="margin-top: 10px;"><img src="{{url_for('static', filename='img/barc.png')}}"></a>
+        </div>
+    </nav>
+  </div>
+</section>
+
+
+  <!-- Nav bar 2-->
+  <section id="nav2" class="navi">
+  <div class="navbar-fixed"style="position: absolute;">
+    <nav class="transparent" id="bar2">
+        <div class="nav-wrapper">
+          <a href="#" class="sidenav-trigger show-on-large right" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+        </div>
+    </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile-nav">
+  	        <li>
+              <img src="{{url_for('static', filename='img/yip.png')}}" id="yipimg">
+            </li>
+            <li>
+              <a href="#about">About YIP</a>
+            </li>
+            <li>
+              <a href="#win">Winners of YIP 2018</a>
+            </li>
+            <li>
+              <a href="#Themes">Themes</a>
+            </li>
+            <li>
+              <a href="#gal">Gallery</a>
+            </li>
+            <li>
+              <a href="#Benfits">Benefits</a>
+            </li>
+            <li>
+              <a href="#media">Media Outreach</a>
+            </li>
+            <li>
+              <a href="#time">Schedule</a>
+            </li>
+            <li>
+              <a href="#testi">Testimonials</a>
+            </li>
+            <li>
+              <a href="rules_index">Rules</a>
+            </li>
+            <li>
+              <a href="awards_index">Awards</a>
+            </li>
+			<li>
+              <a href="signup_index">Sign Up</a>
+            </li>
+            <li>
+              <a href="login_index">Sign In</a>
+            </li>
+  </ul>
+  </section>
+
+
+
+  <!-- Slider -->
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        
+        <img src="{{url_for('static', filename='img/car1.png')}}">
+      </li>
+      <li>
+        <img src="{{url_for('static', filename='img/car5.jpg')}}">
+      </li>
+      <li>
+        <img src="{{url_for('static', filename='img/car3.jpg')}}">
+        <li>
+        <img src="{{url_for('static', filename='img/car4.jpg')}}">
+      </li>
+      <li>
+          <img src="{{url_for('static', filename='img/sel2.jpg')}}">
+      </li>
+    </ul> 
+  </div>
+<div class="divider"></div>
+
+<br>
+
+  <div class="container scrollspy" id="about">
+    <div class="row">
+      <div class="col l12 s12">
+        <div class="card">
+          <div class="card-title indigo-text center" style="font-size: 4.2rem;" data-aos="fade-up" data-aos-duration="2000">
+            About
+          </div>
+          <div class="card-content" style="font-size: 1.1rem" data-aos="fade-up" data-aos-duration="1000">
+             <p> Young Innovators’ Program is a platform to foster young minds with scientific enthusiasm and a credo to solve the problems facing the globe. IIT Kharagpur with a motive of recognizing students with creative ability to conduct scientific research has for the first time launched this program. In a two day visit to IIT Kharagpur, the students will get a chance to explore the scientific environment within and an opportunity to present their projects in front of distinguished researchers and guests. </p>
+             <p>
+             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <br>
+<h2 class="center green-text scrollspy" id="win">Winners of YIP 2018</h2>
+  <section class="container section">
+    <div class="row">
+      <div class="col s12 l4">
+          <img src="{{url_for('static', filename='img/winner.png')}}" alt="" data-aos="fade-up" data-aos-duration="1000" class="responsive-img materialboxed">
+      </div>
+      <div class="col s12 l6 offset-l1">
+        <h2 class="indigo-text text-darken-4" data-aos="fade-up" data-aos-duration="2000">Kaanger Valley Academy</h2>
+        <p data-aos="fade-up" data-aos-duration="3000">The winners of YIP 2018, team Anti-Pollution Mask, came up with the most simple yet effective idea for dealing with the problem of pollution. Based on the cleansing properties of charcoal, they devised an anti-pollution mask that is reusable, cheap and can be easily prepared at home. Most importantly, it can be used by people from all walks of life and by all age groups, young and old alike.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 l4 offset-l1 push-l7">
+          <img src="{{url_for('static', filename='img/runner1.png')}}" alt="" data-aos="fade-up" data-aos-duration="1000" class="responsive-img materialboxed">
+      </div>
+      <div class="col s12 l6 offset-l1 pull-l5 right-align">
+        <h2 class="indigo-text text-darken-4" data-aos="fade-up" data-aos-duration="2000">The Crossword School</h2>
+        <p data-aos="fade-up" data-aos-duration="3000">Team Pothole Warriors from Andhra Pradesh came up with an alternative that would quickly and efficiently fill potholes, which is currently a very cumbersome process requiring manual labour. This portable and easy-to-use model helps in saving the roads and increases their durability.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 l4">
+          <img src="{{url_for('static', filename='img/runner2.png')}}" alt="" data-aos="fade-up" data-aos-duration="1000" class="responsive-img materialboxed">
+      </div>
+      <div class="col s12 l6 offset-l1">
+        <h2 class="indigo-text text-darken-4" data-aos="fade-up" data-aos-duration="2000">Tarapore School</h2>
+        <p data-aos="fade-up" data-aos-duration="3000">The students came up with an effective solution to reduce the problems faced in our country due to improper waste management. Their Smart waste management system makes garbage collection more efficient, and the use of solar panels reduces energy consumption. By reducing the manpower required to handle garbage collection, and given that it is aligned with the ‘Smart City’ and ‘Digital India’ projects undertaken by our country, this project surely is one for the future</p>
+      </div>
+    </div>
+  </section>
+<br>
+
+
+
+  <!-- Icon Boxes -->
+  <section class="section section-icons grey lighten-4 center scrollspy" id="Themes">
+    <div class="container scrollspy">
+      <h2 class="center" data-aos="fade-up" data-aos-duration="2000">Themes</h2>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+          	<img src="{{url_for('static', filename='svg/smartphone.svg')}}" width="100px" height="100px">
+            <h5>Product Designing</h5>
+            <div class="card-action">
+            	<!-- a href="../tempDetails/product.html">More Details</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+          	<img src="{{url_for('static', filename='svg/recycling.svg')}}" width="100px" height="100px">
+            <h5> Resource Management </h5>
+            <div class="card-action">
+            	<!--<a href="../ tempDetails/resourceManagement.html">More Details</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+			<img src="{{url_for('static', filename='svg/apple.svg')}}" width="100px" height="100px">
+            <h5> Health &amp; Cleanliness </h5>
+            <div class="card-action">
+            	<!-- <a href="../tempDetails/health.html">More Details</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+			<img src="{{url_for('static', filename='svg/burn.svg')}}" width="100px" height="100px">
+            <h5>Clean Energy </h5>
+            <div class="card-action">
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+          	<img src="{{url_for('static', filename='svg/technological.svg')}}" width="100px" height="100px">
+            <h5>Hardware Modelling</h5>
+            <div class="card-action">
+           <!--  	<a href="../tempDetails/hard.html">More Details</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+          	<img src="{{url_for('static', filename='img/images.png')}}" width="100px" height="100px" style="border-radius: 50%;">
+            <h5>Disaster Management </h5>
+            <div class="card-action">
+            	<!-- <a href="../tempDetails/disman.html">More Details</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- #0b2f25 -->
+<div class="divider container" ></div><br>
+<h2 class="center purple-text">Gallery</h2>
+
+
+<div id="gal">
+  <div class="carousel carousel-slider center " data-indicators="true">
+    <div class="carousel-fixed-item center middle-indicator">
+     <div class="left">
+      <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
+     </div>
+     
+     <div class="right">
+     <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+     </div>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <img src="{{url_for('static', filename='img/sel1.jpg')}}">
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <img src="{{url_for('static', filename='img/sel2.jpg')}}">
+    </div>
+    <div class="carousel-item blue white-text" href="#three!">
+      <img src="{{url_for('static', filename='img/sel4.jpg')}}">
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <img src="{{url_for('static', filename='img/sel5.jpg')}}">
+    </div>
+    <div class="carousel-item blue white-text" href="#five!">
+      <img src="{{url_for('static', filename='img/sel6.jpg')}}">
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+    <div class="col s12 l12">
+      <div class="card scrollspy" id="reg">
+        <div class="center">
+          <span class="card-title black-text center" style="font-size: 4.2rem; text-align: center;"><b class="center brown-text">Eligibility</b></span>
+        </div>
+        <div class="card-content" style="padding-bottom: 85px; font-size: 1.1rem;">
+          <p>Students currently enrolled in class 8th, 9th and 10th will be expected to form groups of 2-3 and come up with a scientific innovation in form of working model, diagram or animation that can potentially solve a problem facing the globe. One teacher from every participating school will be responsible for creating an account on our website, registering the team, paying the registration fees and uploading the submissions of the preliminary round.<br><br><br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<!--     <div class="parallax-container">
+      <div class="parallax"><img src="{{url_for('static', filename='img/par.jpg')}}"></div>
+    </div> -->
+
+        <div class="container scrollspy" id="media">
+      <h2 class="center indigo-text">Media Outreach</h2>
+  <div>
+  <div class="row">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="3000" data-caption="THE QUINT" src="{{url_for('static', filename='img/paper1.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-right" data-aos-duration="3000" data-caption="THE ECONOMIC TIMES" src="{{url_for('static', filename='img/paper2.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="3000" data-caption="The IndiaEXPRESS" src="{{url_for('static', filename='img/paper3.png')}}">
+</div>
+  <div class="row">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="3000" data-caption="INDIA NEWS" src="{{url_for('static', filename='img/paper4.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-right" data-aos-duration="3000" data-caption="DAILYHUNT" src="{{url_for('static', filename='img/paper5.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="3000" data-caption="" src="{{url_for('static', filename='img/paper6.png')}}">
+</div>
+  <div class="row">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="3000" data-caption="DAINIK JAGRAN" src="{{url_for('static', filename='img/paper7.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-right" data-aos-duration="3000" data-caption="PRABHAT KHABAR" src="{{url_for('static', filename='img/paper8.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="3000" data-caption="DEVDISCOURSE" src="{{url_for('static', filename='img/paper9.png')}}">
+</div>
+ </div>
+</div>
+  <br>
+
+
+
+<section class="section section-icons grey lighten-4 center scrollspy" id="Benfits">
+    <div class="container">
+      <h2 class="center green-text">Benefits of students</h2>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="2000">
+          	<img src="{{url_for('static', filename='svg/robot.svg')}}" width="100px" height="100px">
+            <p>Promote the culture of innovation among students in the domain of science.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+          	<img src="{{url_for('static', filename='svg/diploma.svg')}}" width="100px" height="100px">
+            <p>Compete with top Indian schools and get evaluated by IIT faculties and scholars.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel" data-aos="flip-left" data-aos-duration="3000">
+          	<img src="{{url_for('static', filename='svg/university.svg')}}" width="100px" height="100px">
+            <p> Share the delightful experience of visiting the largest IIT campus. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="row container">
+  	<h2 class="center scrollspy blue-text" id="time">Tentative Schedule</h2>
+    <div class="col s12">   
+      <ul class="tabs">
+        <li class="tab col s2"><a class="active" href="#test1">Registration</a></li>
+        <li class="tab col s2"><a href="#test2">Round 1</a></li>
+        <li class="tab col s2"><a href="#test3">Round 2</a></li>
+        <li class="tab col s2"><a href="#test4">Round 3</a></li>
+        <li class="tab col s2"><a href="#test5">Final Event</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12" style="font-size: 1.1rem;"><h2 class="green-text">Registration</h2>
+-To be declared<br>
+The principal needs to nominate a coordinating teacher for this program, who will be given a user ID and password for registration of the students. 
+The students need to form a team of 2-3 members and submit their name and details to the coordinating teacher of the school. 
+Registration fees: To be declared. 
+</div>
+    <div id="test2" class="col s12" style="font-size: 1.1rem;"><h2 class="purple-text">Round 1</h2>
+    	The team will submit their abstract of the project ideas briefing the scientific proposal based on the chosen theme. The online submissions of the projects will be done by the coordinating teacher by using his/her user id and password on the portal. Round 1 results will be released both on our website. All participants who make it to the next round will also receive the news via email. The selected students will proceed to round 2.
+    </div>
+    <div id="test3" class="col s12" style="font-size: 1.1rem;"><h2 class="purple-text">Round 2 (Semifinal)</h2>
+    	Selected students will submit their full-fledged description of the proposal (via the coordinating teacher by using his/her user ID and password) comprising of complete technical description, laboratory work, cost and sustainability analysis, survey if conducted and future prospects.
+    </div>
+    <div id="test4" class="col s12" style="font-size: 1.1rem !important;">
+    	<h2 class="purple-text">Round 3 (Final)</h2>
+    	Top teams nationwide will be selected after the semifinal round and they will be called to Indian Institute of Technology, Kharagpur to exhibit and demonstrate their models or prototype and charts which will be evaluated by professors of IIT Kharagpur. The selected team need to confirm their presence for a two-day event held in IIT Kharagpur.The registration fees for this round will be declared after the announcement of the results of the 1st round.
+    </div>
+    <div id="test5" class="col s12" style="font-size: 1.1rem !important;">
+    	<h2>Final Event @ IIT Kharagpur</h2>
+		-To be declared<br>
+		Start of two day finals of the Young Innovators' program at IIT Kharagpur.
+    </div>
+  </div>
+
+<br>
+
+<h2 class="center purple-text scrollspy" id="testi">Testimonials</h2>
+  <div>
+  <div class="row">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="2000" data-caption="Message from The Director" src="{{url_for('static', filename='img/test.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-right" data-aos-duration="2000" data-caption="Message from The Dean" src="{{url_for('static', filename='img/test1.png')}}">
+ <img class="materialboxed col l4 s12" data-aos="flip-left" data-aos-duration="2000" data-caption="Message from The Associate Dean" src="{{url_for('static', filename='img/test2.png')}}">
+</div>
+ </div>
+
+
+<br>
+
+
+
+
+
+           <footer class="page-footer"  style="background: #004d38">
+          <div >
+            <div class="row">
+              <div class="col l4 s12">
+                <h5 class="white-text">Contact</h5>
+                <p> Branding and Relations Cell<br/> Office of Alumni Affairs & International Relations<br/> Indian Institute of Technology, Kharagpur <br/> Pin-721302 West Bengal, India <br/> <strong>Phone:</strong><br> 8967498335 (Bhaskar Basak) <br/> 8804178378 (Bhavya Kumar) <br/> <strong>Email:</strong> barc@iitkgp.ac.in </p>
+              </div>
+              <div class="col l4 s12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d784.9332419499943!2d87.30956309721707!3d22.3193820950838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3a63547376e5c22c!2sMain+Building+IIT+KGP!5e0!3m2!1sen!2sin!4v1471677047994" width="100%" height="40%" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="col l4 s12">
+                <h5>Connect with us on</h5>
+            <div class="row">
+              
+                <div class="col">
+                    <a href="https://www.facebook.com/barciitkgp/" target="_blank">
+                        <img src="{{url_for('static', filename='img/fb.png')}}" width="30" style="border-radius: 50%;">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://twitter.com/IITKgp" target="_blank">
+                        <img src="{{url_for('static', filename='img/twitter.png')}}" width="30">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.youtube.com/channel/UCNrhzapF2ZwRdUvoAUO8ytg" target="_blank">
+                        <img src="{{url_for('static', filename='img/youtube.png')}}" width="30">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/company/brandingandrelationscell" target="_blank">
+                        <img src="{{url_for('static', filename='img/linkedin.png')}}" width="30"> 
+                    </a>
+                </div>
+                 <div class="col-xs-8"></div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Branding And Relations Cell,IIT Kharagpur.
+            </div>
+          </div>
+        </footer>       
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='main.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='aos.js')}}"></script>
+<script src="{{url_for('static', filename='yipjs.js')}}"></script>
+
+  <script>   
+        // Sidenav
+const sideNav = document.querySelector('.sidenav');
+M.Sidenav.init(sideNav,{});
+  var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+  });
+
+// Slider
+const slider = document.querySelector('.slider');
+M.Slider.init(slider, {
+  height: 500,
+  indicators: false,
+  interval: 500,
+  transition: 5000,
+});
+
+const photoBox = document.querySelectorAll('.materialboxed');
+M.Materialbox.init(photoBox, {});
+
+
+    var a = screen.height;
+   $(document).ready(function(){
+   	$('#hola').fadeOut(1000);
+
+   	$('.tabs').tabs();
+     $('.parallax').parallax();
+
+          $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+          // start carrousel
+   $('.carousel.carousel-slider').carousel({
+      fullWidth: true,
+      indicators: false
+   });
+
+
+   // move next carousel
+   $('.moveNextCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('next');
+   });
+
+   // move prev carousel
+   $('.movePrevCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('prev');
+   });
+        setInterval(function(){
+      $('.carousel.carousel-slider').carousel('next');
+    },5000);
+
+            $(window).scroll(function() {
+          if($(this).scrollTop() > 500) { 
+              $('#nav1').addClass('navi');
+              $('#bar2').removeClass('transparent');
+              $('#bar2').addClass('black');
+              $('#nav2').removeClass('navi');
+          } else {
+              $('#nav2').addClass('transparent');
+              $('#nav2').removeClass('black');
+              $('#nav1').removeClass('navi');
+              $('#nav2').addClass('navi');
+          }
+        });
+
+  AOS.init();
+
+
+  $('.slider').slider({
+    'height' : a,
+    'indicators' : false,
+  });
+  $('.modal').modal();
+  $(".dropdown-button").dropdown(
+    {
+      belowOrigin: true
+    }
+  );
+
+  $('ul.tabs').tabs();
+  $('.scrollspy').scrollSpy();
+  $(".button-collapse").sideNav();
+
+      $('.collapsible').collapsible();
+
+});
+
+  </script>
+</body>
+</html>

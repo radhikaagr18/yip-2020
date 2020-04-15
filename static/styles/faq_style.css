@@ -1,0 +1,33 @@
+		body{
+			background-color: #dadae3 !important;
+		}
+		.home_div{
+			margin: auto !important;
+			
+		}
+		.new_session{
+			padding: 5% !important;
+			margin-top: 3% !important;
+			
+		}
+		.session_details{
+			padding: 5% !important;
+			margin-top:3% !important;
+			border-left: thick !important;
+			border-color: black !important;
+		}
+
+
+		.collapsible-header{
+		background-color: #91d8d5 !important;
+    	border-bottom: 2px solid #ddd !important;
+    	transition: box-shadow .3s;
+
+
+
+		} 
+		
+		.collapsible-header:hover {
+
+  		box-shadow: 0px 0px 15px 8px #50e454e0;
+		}

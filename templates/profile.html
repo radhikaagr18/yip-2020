@@ -1,0 +1,321 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/aos.css') }}">
+  <link rel="short icon" type="image/jpg" href="{{url_for('static', filename='img/logo.jpg')}}" >
+
+</head>
+<title>Young Innovators' Program, IIT Kharagpur </title>
+<style type="text/css">
+.navi{
+  display: none;
+}
+a img{
+  max-height: 10vh !important;
+}
+#yipimg{
+  max-height: 10vh !important;
+  padding-left: 10px;
+}
+#bar2{
+            height: auto;
+            width: auto;
+    }
+#bar1{
+            height: 13vh;
+            opacity: 0.8;
+    }
+ .card-panel{
+  height: 250px !important;
+ }
+ @import url(https://fonts.googleapis.com/css?family=Oswald|Josefin+Sans:300);
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* ====  Preloader styles ==== */
+#hola{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252328;
+    position: fixed;
+    z-index: 999;
+}
+#preloader {
+  position:relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    margin: 0 auto;
+}
+#preloader span {
+  position:absolute;
+  border: 8px solid #fff;
+  border-top: 8px solid transparent;
+  border-radius:999px;
+}
+#preloader span:nth-child(1){
+  width:80px;
+  height:80px;
+  animation: spin_1 2s infinite linear;
+}
+#preloader span:nth-child(2){
+  top: 20px;
+  left: 20px;
+  width:40px;
+  height:40px;
+  animation: spin_2 1s infinite linear;
+}
+@keyframes spin_1 {
+  0% {transform: rotate(360deg); opacity: 1;}
+  50% {transform: rotate(180deg); opacity: 0.5;}
+  100% {transform: rotate(0deg); opacity: 1;}
+}
+@keyframes spin_2 {
+  0% {transform: rotate(0deg); opacity: 0.5;}
+  50% {transform: rotate(180deg); opacity: 1;}
+  100% {transform: rotate(360deg); opacity: 0.5;}
+}
+</style>
+
+<body>
+        <div id="hola">
+        <div id="preloader">
+        <span></span>
+        <span></span>
+          </div>
+            </div>
+<section>
+  <div class="navbar">
+    <nav class="black z-depth-0" id="bar1">
+        <div class="nav-wrapper">
+          <a href="http://www.barc.iitkgp.ac.in/" class="brand-logo left" style="margin-top: 10px;"><img src="{{url_for('static', filename='img/barc.png')}}"></a>
+		  <a href="http://127.0.0.1:5000/logout" class="right waves-effect waves-light btn" style="margin-top: 10px;">Logout >></a>
+        </div>
+    </nav>
+  </div>
+</section>
+
+<nav class="indigo z-depth-0">
+	<div class="nav-wrapper">
+		<div class = "col s12">
+		<a href="root"  class = "breadcrumb">Home</a>
+		<a href="#" class="breadcrumb" >Dashboard</a>
+		</div>
+	</div>
+</nav>
+
+
+<section>
+    <table class="striped" id="table1">
+      <thead>
+        <tr>
+            <th>team_name</th>
+            <th>student1</th>
+            <th>student2</th>
+            <th>student3</th>
+            <th>Round 1 submission</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><div class="input-field">
+            <input type="text" name="">
+          </div></td>
+          <td><div class="input-field">
+            <input type="text" name="">
+          </div></td>
+          <td><div class="input-field">
+            <input type="text" name="">
+          </div></td>
+          <td><div class="input-field">
+            <input type="text" name="">
+          </div></td>
+          <td>   <form action="http://127.0.0.1:5000/upload" id="asd">
+    <div class="file-field input-field">
+      <div class="btn green">
+        <span>File</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload">
+      </div>
+	  <a class="waves-effect waves-light btn right" type="submit">Upload</a>
+    </div>
+  </form></td>
+        </tr>
+      </tbody>
+    </table>
+</section>
+
+
+
+<form id="Team"><input type="submit" id="Teams" class="waves-effect waves-light btn" style="margin-top: 20px; color:white; " value="Show Team"></input> </form>
+
+
+
+<div class="container">
+  <div class="row">
+    <form class="col s12" id="addform">
+      <div class="row">
+        <div class="input-field col l2 s12">
+          <input id ="team_name" placeholder="Team Name" type="text" class="validate">
+        </div>
+        <div class="input-field col l2 s12">
+          <input id ="team_leader" placeholder="Team Leader" type="text" class="validate">
+        </div>
+        <div class="input-field col l2 s12">
+          <input id ="member1" placeholder="Member 1" type="text" class="validate">
+        </div>
+        <div class="input-field col l2 s12">
+          <input id ="member2" placeholder="Member 2" type="text" class="validate">
+        </div>
+        <br>
+        <div class="col l2 s12">
+          <input type="Submit" class="waves-effect waves-light btn center white-text" style="margin:auto;" value="Add Team"></input>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <form class="col s12" id="Delete">
+      <div class="row">
+        <div class="input-field col s7">
+          <input id="delteam" placeholder="Team Name" type="text" class="validate">
+        </div>
+        <br>
+        <div class="col s4">
+        <input type="submit" class="waves-effect waves-light btn red center white-text" style="margin-top: 10px;" value="Delete Team"></input>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#hola').fadeOut(1000);
+	});
+</script>
+
+<script>
+      $('#Team').submit(function(event) 
+      {
+	  event.preventDefault();
+	  console.log("started");
+        jQuery.ajax
+        ({
+		  type : 'GET',
+          url : 'http://127.0.0.1:5000/login/profile/teams',
+		  success: function(data){ 
+            console.log('done');    
+            },
+		complete: function(data){
+            console.log(data.responseJSON[4]);
+			console.log(data.responseJSON.length);
+			var rowCount = table1.rows.length;
+        for (var i = rowCount -1; i >= 0; i--) {
+            table1.deleteRow(i);
+        }
+		var tr = $('<tr/>');
+		 $(tr).append("<th>Team_name</th><th>Team Leader</th><th>Student2</th><th>Student3</th><th>Round 1 Submission</th>");
+		 $('.striped').append(tr);
+			for (var i = 0; i < data.responseJSON.length; i++) {
+ let tr = $('<tr/>');
+  $(tr).append("<td>" + data.responseJSON[i][2] + "</td>");
+  $(tr).append("<td>" + data.responseJSON[i][3] + "</td>");
+  $(tr).append("<td>" + data.responseJSON[i][4] + "</td>");
+  $(tr).append("<td>" + data.responseJSON[i][5] + "</td>");
+  $(tr).append("<td>" + "<form id=" + "asd" + " action=" + "/upload" +" method=" + "POST " + " enctype=" + "multipart/form-data" + ">" + "<div class=" + "file-field input-field>" + "<div class=" + "btn green>"
+   + "<span>File</span>" + "<input type=" + "file" +" name="+"file"+" multiple>" + "</div><div class=" + "file-path-wrapper>" + 
+   "<input class=" + "file-path validate" + "type=" + "text"+" placeholder=" +"Upload></div> </div><button type = "+"submit" +"form=" + "asd" + ">Upload</button></form>" + "</td>");
+  $('.striped').append(tr);
+}
+			
+            },
+        });
+		console.log('hey bud');
+		
+      });
+  </script>
+  
+
+<script>
+      $('#addform').submit(function(event) 
+      {
+	  event.preventDefault();
+	  console.log("started");
+	  data =$(this).serialize()
+        jQuery.ajax
+        ({
+		  type : 'POST',
+          url : 'http://127.0.0.1:5000/login/profile/add',
+          data ://a,//JSON.stringify(data, null, '\t'),
+          {
+            "team_name":$('#team_name').val(),
+            "student1":$('#team_leader').val(),
+            "student2":$('#member1').val(),
+			"student3": $('#member2').val()
+          },
+		  // contentType: "application/json; charset=utf-8",
+		   beforeSend:function(e){
+          console.log(e)
+        },
+        })
+		console.log("hey buddy  ")
+      });
+  
+  </script>
+
+<script>
+      $('#Delete').submit(function(event) 
+      {
+	  event.preventDefault();
+	  console.log("started");
+	  data =$(this).serialize()
+        jQuery.ajax
+        ({
+		  type : 'POST',
+          url : 'http://127.0.0.1:5000/login/profile/delete',
+		  data ://a,//JSON.stringify(data, null, '\t'),
+          {
+            "team_name":$('#delteam').val(),
+          },
+		  // contentType: "application/json; charset=utf-8",
+		   beforeSend:function(e){
+          console.log(e)
+        },
+        })
+		console.log("hey buddy  ")
+      });
+  
+  </script>
+
+
+  <script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='main.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='aos.js')}}"></script>
+<script type="text/javascript">
+         $(document).ready(function(){
+		 
+            $('#hola').fadeOut(1000);
+          });
+</script>
+
+
+</body>
+</html>

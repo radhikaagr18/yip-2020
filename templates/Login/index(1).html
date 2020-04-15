@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>YIP Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	
+	
+	<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/CB9FFECD-ADE4-F94F-AEC5-D383586EAAF8/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/C45398D9-A43D-7E4C-B6A3-E69DED01216A/abn/main.css"/><script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+  
+  	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+      <link rel="stylesheet" href="style.css">
+      <style type="text/css">
+      	    a img{
+  max-height: 10vh !important;
+}
+#yipimg{
+  max-height: 8vh !important;
+  padding-left: 10px;
+}
+
+
+      .row > div{
+      padding: 10px;
+      background: #ddd;
+      border: 1px solid #fff;
+    }
+    .form{
+        max-width: 70%;
+        padding: 2px;
+        transform: translateX(30%);
+    }
+    .btn{
+        width: 50%;
+        margin-left: 10%;
+    }
+    /* ====  Preloader styles ==== */
+#hola{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252328;
+    position: fixed;
+    z-index: 999;
+}
+#preloader {
+  position:relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    margin: 0 auto;
+}
+#preloader span {
+  position:absolute;
+  border: 8px solid #fff;
+  border-top: 8px solid transparent;
+  border-radius:999px;
+}
+
+#preloader span:nth-child(1){
+  width:80px;
+  height:80px;
+  animation: spin_1 2s infinite linear;
+}
+#preloader span:nth-child(2){
+  top: 20px;
+  left: 20px;
+  width:40px;
+  height:40px;
+  animation: spin_2 1s infinite linear;
+}
+@keyframes spin_1 {
+  0% {transform: rotate(360deg); opacity: 1;}
+  50% {transform: rotate(180deg); opacity: 0.5;}
+  100% {transform: rotate(0deg); opacity: 1;}
+}
+@keyframes spin_2 {
+  0% {transform: rotate(0deg); opacity: 0.5;}
+  50% {transform: rotate(180deg); opacity: 1;}
+  100% {transform: rotate(360deg); opacity: 0.5;}
+}
+      </style>
+
+  
+</head>
+
+<body>
+	    <!-- Page preloader -->
+        <div id="hola">
+        <div id="preloader">
+        <span></span>
+        <span></span>
+          </div>
+            </div>
+    <!-- logo -->
+  <div class="navbar-fixed">
+    <nav class="nav-wrapper transparent z-depth-0" style="height: 12%; width: 100% !important;">
+          <a href="../index.html" class="brand-logo right" style="margin-top: 10px;"><img src="../img/yip.png"></a>
+          <a href="http://www.barc.iitkgp.ac.in/" class="brand-logo left" style="margin-top: 10px;"><img src="../img/kgp.png"></a>    </nav>
+  </div>
+
+
+<div id="particles-js"></div>
+<br><br>
+<body class="login">
+	<br><br>
+	<div class="container">
+		<div class="login-container-wrapper clearfix">
+			<div>
+				<img src="logo.jpg" class="logo">
+
+				
+
+			</div>
+			<div class="welcome"><strong>Welcome,</strong> please login</div>
+
+			<form class="form-horizontal login-form">
+				<div class="form-group relative">
+					<input id="login_username" class="form-control input-lg" type="email" placeholder="Username" required>
+					<i class="fa fa-user"></i>
+				</div>
+				<div class="form-group relative password">
+					<input id="login_password" class="form-control input-lg" type="password" placeholder="Password" required>
+					<i class="fa fa-lock"></i>
+				</div>
+			  <div class="form-group center">
+			    <button type="submit" class="btn center">Login</button>
+			  </div>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+
+  
+
+	<script  src="index.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#hola').fadeOut(1000);
+	});
+</script>
+
+
+
+</body>
+
+</html>
